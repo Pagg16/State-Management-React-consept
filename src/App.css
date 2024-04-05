@@ -1,0 +1,25 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.appNav {
+  display: flex;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.store {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
