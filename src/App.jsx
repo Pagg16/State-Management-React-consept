@@ -1,18 +1,28 @@
 import "./App.css";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Store from "./Store";
 
 function App() {
+  let location = useLocation();
+
   return (
     <div className="App">
       <nav className="appNav">
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="..">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/store">Store</NavLink>
+            <NavLink
+              to={
+                location.pathname === "/store"
+                  ? `${location.pathname + location.search}`
+                  : "/store"
+              }
+            >
+              Store
+            </NavLink>
           </li>
         </ul>
       </nav>
